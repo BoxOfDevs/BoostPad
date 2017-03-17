@@ -38,10 +38,10 @@ class Main extends PluginBase implements Listener {
 			$dz = $direction->getZ();
 			if($this->config->get("Particle") == "true"){
 				$level->addParticle(new FlameParticle(new Vector3($x, $y, $z)));
-				$level->addParticle(new FlameParticle(new Vector3($x-0.5, $y, $z)));
-				$level->addParticle(new FlameParticle(new Vector3($x, $y, $z-0.5)));
-				$level->addParticle(new FlameParticle(new Vector3($x+0.5, $y, $z)));
-				$level->addParticle(new FlameParticle(new Vector3($x, $y, $z+0.5)));
+				$level->addParticle(new FlameParticle(new Vector3($x-0.3, $y, $z)));
+				$level->addParticle(new FlameParticle(new Vector3($x, $y, $z-0.3)));
+				$level->addParticle(new FlameParticle(new Vector3($x+0.3, $y, $z)));
+				$level->addParticle(new FlameParticle(new Vector3($x, $y, $z+0.3)));
 			}
 			$player->knockBack($player, 0, $dx, $dz, $this->config->get('BoostPower'));
 		}
