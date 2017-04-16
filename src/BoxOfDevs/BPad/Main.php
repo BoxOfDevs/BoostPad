@@ -31,13 +31,13 @@ class Main extends PluginBase implements Listener {
 		$y = $player->getY();
 		$z = $player->getZ();
 		$level = $player->getLevel();
-		$block = $level->getBlock(new Vector3($x, $y-1, $z));
+		$block = $level->getBlock($player->getSide(0));
 		if($block->getID() == $this->config->get('Block')){
 			$direction = $player->getDirectionVector();
 			$dx = $direction->getX();
 			$dz = $direction->getZ();
 			if($this->config->get("Particle") == "true"){
-				$level->addParticle(new FlameParticle(new Vector3($x, $y, $z)));
+				$level->addParticle(new FlameParticle($player));
 				$level->addParticle(new FlameParticle(new Vector3($x-0.3, $y, $z)));
 				$level->addParticle(new FlameParticle(new Vector3($x, $y, $z-0.3)));
 				$level->addParticle(new FlameParticle(new Vector3($x+0.3, $y, $z)));
