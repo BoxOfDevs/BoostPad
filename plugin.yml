@@ -1,7 +1,5 @@
 name: BoostPad
 main: BoxOfDevs\BPad\Main
-api:
-- 2.0.0
-- 3.0.0
+api: [3.0.0-ALPHA7, 3.0.0-ALPHA8, 3.0.0-ALPHA9, 3.0.0-ALPHA10]
 version: 1.0
 author: BoxOfDevs Team
